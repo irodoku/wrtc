@@ -2,6 +2,10 @@ let peerConnection = new RTCPeerConnection(
     {'iceServers': [
             {'urls': 'stun:stun.services.mozilla.com'},
             {'urls': 'stun:stun.l.google.com:19302'},
+            {'urls': 'turn:turn.anyfirewall.com:443?transport=tcp',
+                credential: 'webrtc',
+                username: 'webrtc'
+            }
         ]
     }
 )
